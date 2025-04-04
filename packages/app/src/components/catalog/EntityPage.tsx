@@ -59,6 +59,8 @@ import {
   isKubernetesAvailable,
 } from '@backstage/plugin-kubernetes';
 
+import { EntityJiraDashboardContent, isJiraDashboardAvailable } from '@axis-backstage/plugin-jira-dashboard';
+ 
 const techdocsContent = (
   <EntityTechdocsContent>
     <TechDocsAddons>
@@ -241,6 +243,15 @@ const defaultEntityPage = (
 
     <EntityLayout.Route path="/docs" title="Docs">
       {techdocsContent}
+    </EntityLayout.Route>
+
+    {/* Jira Dashboard Integration */}
+    <EntityLayout.Route
+      if={isJiraDashboardAvailable}
+      path="/jira-dashboard"
+      title="Jira Dashboard"
+    >
+      <EntityJiraDashboardContent />
     </EntityLayout.Route>
   </EntityLayout>
 );

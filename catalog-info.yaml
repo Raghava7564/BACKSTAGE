@@ -3,11 +3,11 @@ kind: Component
 metadata:
   name: backstage-app
   description: An example of a Backstage application.
-  # Example for optional annotations
-  # annotations:
-  #   github.com/project-slug: backstage/backstage
-  #   backstage.io/techdocs-ref: dir:.
+  annotations:
+    jira/project-key: BAC  # Jira project key integration (correct format)
+    github.com/project-slug: Raghava7564/BACKSTAGE  # Your GitHub repo (update if needed)
+    backstage.io/techdocs-ref: github:https://github.com/Raghava7564/BACKSTAGE  # TechDocs integration
 spec:
   type: website
-  owner: john@example.com
+  owner: team-cloud  # Change to a valid Backstage group/user
   lifecycle: experimental
